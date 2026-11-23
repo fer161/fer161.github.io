@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lirien — Case study | Fernanda Mendiola · Antesis</title>
-  <meta name="description" content="Case study de Lirien: aplicación móvil en Flutter y NestJS para lectores y escritores, con biblioteca híbrida en la nube y lectura interactiva." />
+  <meta name="description" content="Case study de Lirien: app Android en Flutter y Firebase para lectores y escritores. Biblioteca de PDF/EPUB, lector inmersivo, estudio de escritura, funciona sin conexión y opera a costo cero." />
   <meta name="theme-color" content="#08070c" />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" type="image/png" href="assets/img/logo-emblem.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:ital@0;1&family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>
     (function () {
@@ -69,38 +69,55 @@
       <div class="case-head">
         <div>
           <div class="case-chips reveal">
-            <span class="chip wip">MVP en desarrollo</span>
+            <span class="chip live">MVP funcional</span>
+            <span class="chip">Android</span>
             <span class="chip">Producto propio</span>
-            <span class="chip">Mobile & Cloud</span>
           </div>
           <h1 class="reveal" style="--d:.08s">Lirien<span class="grad-text">.</span><br /><span class="serif" style="font-size:.62em;color:var(--text-2)">Leer y escribir, en un solo lugar.</span></h1>
           <p class="lead reveal" style="--d:.16s">
-            Una app móvil que une la parte social de la lectura serializada con la privacidad de una biblioteca personal de PDF y EPUB, sincronizada en la nube.
+            App móvil para lectores y escritores que reúne las historias de la comunidad y tu biblioteca personal de PDF y EPUB, con respaldo en la nube y sin depender de la conexión.
           </p>
+          <div class="hero-actions reveal" style="--d:.22s">
+            <a href="https://github.com/fer161/fer161.github.io/releases/download/lirien-v1.0.0/Lirien-1.0.0.apk" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+              Descargar APK
+            </a>
+            <span class="btn btn-ghost" style="cursor:default" title="El repositorio de Lirien es privado">🔒 Repositorio privado</span>
+          </div>
+          <p class="apk-note reveal" style="--d:.26s">v1.0.0 · Android 64-bit · 33 MB · APK firmado</p>
         </div>
 
         <dl class="meta-list reveal" style="--d:.2s">
-          <div><dt>Rol</dt><dd>Diseño UI/UX, desarrollo móvil y backend</dd></div>
-          <div><dt>Plataforma</dt><dd>iOS & Android</dd></div>
-          <div><dt>Stack</dt><dd>Flutter · NestJS · PostgreSQL</dd></div>
-          <div><dt>Estado</dt><dd>MVP en progreso</dd></div>
+          <div><dt>Rol</dt><dd>Diseño, desarrollo y arquitectura</dd></div>
+          <div><dt>Plataforma</dt><dd>Android</dd></div>
+          <div><dt>Stack</dt><dd>Flutter · Dart · Firebase</dd></div>
+          <div><dt>Estado</dt><dd>MVP funcional · v1.0.0</dd></div>
         </dl>
+      </div>
+
+      <div class="stats case-stats reveal">
+        <div class="stat"><b>~9.5<span class="grad-text">k</span></b><span>líneas de Dart en 28 archivos</span></div>
+        <div class="stat"><b class="grad-text">$0</b><span>costo de infraestructura</span></div>
+        <div class="stat"><b>25</b><span>pruebas automáticas</span></div>
+        <div class="stat"><b>Offline</b><span>funciona sin conexión</span></div>
       </div>
 
       <!-- Portada con pantallas -->
       <div class="case-cover reveal" aria-hidden="true">
         <div class="phone side">
           <div class="phone-screen">
-            <div class="ps-head"><b>Biblioteca</b><span>Mis archivos</span></div>
+            <div class="ps-head"><b>Biblioteca</b><span>Ordenar: progreso</span></div>
+            <div class="ps-tabs"><span>Comunidad</span><span class="on">Mis archivos</span></div>
             <div class="ps-grid">
-              <div class="ps-book b1"></div><div class="ps-book b2"></div>
-              <div class="ps-book b3"></div><div class="ps-book b4"></div>
+              <div class="ps-book b1"><em>EPUB</em></div><div class="ps-book b2"><em>PDF</em></div>
+              <div class="ps-book b3"><em>EPUB</em></div><div class="ps-book b4"><em>PDF</em></div>
             </div>
           </div>
         </div>
         <div class="phone center">
-          <div class="phone-screen" style="padding:0">
-            <img src="lirien-logo.jpg" alt="" class="ps-logo" />
+          <div class="phone-screen ps-splash">
+            <img src="assets/img/lirien-logo-dark.png" alt="" />
+            <span>Leer · Escribir · Compartir</span>
           </div>
         </div>
         <div class="phone side">
@@ -108,8 +125,10 @@
             <div class="ps-head"><span>‹ Capítulo 3</span><span>42%</span></div>
             <div class="ps-title">La casa de las horas quietas</div>
             <div class="ps-line w90"></div><div class="ps-line w85"></div>
+            <div class="ps-line w75 mk-lav"></div>
             <div class="ps-hl"><span class="ps-bubble">💬 12</span><div class="ps-line w90"></div><div class="ps-line w75"></div></div>
-            <div class="ps-line w85"></div><div class="ps-line w60"></div>
+            <div class="ps-line w85"></div><div class="ps-line w60 mk-malva"></div>
+            <div class="ps-react"><span>♥ 48</span><span>▲ 21</span><span>💬 12</span></div>
           </div>
         </div>
       </div>
@@ -122,7 +141,11 @@
         <a href="#problema">El problema</a>
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#arquitectura">Arquitectura</a>
-        <a href="#pantallas">Pantallas clave</a>
+        <a href="#costo-cero">Costo cero</a>
+        <a href="#seguridad">Seguridad y calidad</a>
+        <a href="#diseno">Diseño</a>
+        <a href="#pantallas">Pantallas</a>
+        <a href="#proximos">Próximos pasos</a>
       </nav>
 
       <div>
@@ -130,153 +153,231 @@
           <span class="eyebrow"><span class="idx">01</span> Resumen</span>
           <h2>Un espacio para lectores y escritores.</h2>
           <p>
-            <strong>Lirien</strong> está pensada para quienes quieren un solo lugar para consumir historias de la comunidad y organizar su biblioteca personal. Combina la interacción social de las plataformas de lectura serializada con el control y la privacidad de un lector de documentos propios respaldados en la nube.
+            <strong>Lirien</strong> reúne en un solo lugar las historias de la comunidad y la biblioteca personal (PDF y EPUB). Junta la parte social de las plataformas de lectura por capítulos con la privacidad de un lector propio, con respaldo en la nube.
           </p>
         </section>
 
         <section id="problema" class="chapter reveal">
           <span class="eyebrow"><span class="idx">02</span> El problema</span>
-          <h2>La experiencia de lectura está fragmentada.</h2>
+          <h2>La experiencia de lectura está partida en dos.</h2>
           <p>
-            Los lectores reparten su tiempo entre apps sociales llenas de distracciones y lectores de PDF/EPUB estáticos que no sincronizan notas entre dispositivos.
+            Hoy los lectores reparten su experiencia entre apps sociales llenas de distracciones y lectores de PDF/EPUB que no se conectan con nada y no guardan bien sus notas.
           </p>
           <div class="split">
             <div class="card">
               <h4>Hoy</h4>
               <ul>
-                <li>Apps sociales con ruido y distracciones</li>
-                <li>Lectores de archivos rígidos y aislados</li>
-                <li>Notas y progreso que no se sincronizan</li>
+                <li>Apps sociales llenas de distracciones</li>
+                <li>Lectores de PDF/EPUB aislados</li>
+                <li>Notas y subrayados que se pierden</li>
               </ul>
             </div>
             <div class="card good">
               <h4>Con Lirien</h4>
               <ul>
-                <li>Interfaz oscura y limpia centrada en leer</li>
-                <li>Comunidad y archivos propios en una biblioteca</li>
-                <li>Progreso y notas en todos tus dispositivos</li>
+                <li>Comunidad y archivos propios en una sola app</li>
+                <li>Interfaz limpia con tema claro y oscuro</li>
+                <li>Tipografía configurable y notas respaldadas</li>
               </ul>
             </div>
           </div>
-          <div class="quote">“Centralizar ambos mundos sin sacrificar la concentración del lector, y dar a los creadores herramientas para publicar sin intermediarios técnicos.”</div>
         </section>
 
         <section id="funcionalidades" class="chapter reveal">
           <span class="eyebrow"><span class="idx">03</span> Funcionalidades</span>
-          <h2>Diseñadas con criterio de producto.</h2>
-          <p>Cada función responde a un momento concreto del lector o del autor.</p>
+          <h2>Todo el ciclo: descubrir, leer, escribir.</h2>
           <div class="features">
             <article class="card feature">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7z"/></svg></span>
-              <h3>Biblioteca híbrida en la nube</h3>
-              <p>Historias de la comunidad junto a tus propios PDF y EPUB, sincronizados automáticamente entre teléfono y tablet.</p>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span>
+              <h3>Biblioteca en dos partes</h3>
+              <p>Una pestaña con las historias de la comunidad y otra con tus archivos. Importa PDF y EPUB y ordénalos por fecha, título o progreso. La portada se extrae sola: la imagen del EPUB o la primera página del PDF.</p>
             </article>
             <article class="card feature">
               <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg></span>
-              <h3>Lectura inmersiva y multimedia</h3>
-              <p>Los autores integran imágenes, audio ambiental y video directamente en los pasajes clave de la narrativa.</p>
+              <h3>Lector inmersivo</h3>
+              <p>Historias y EPUB comparten el mismo lector, con tipografía, tamaño y tema a elección. Los capítulos admiten imágenes, audio y video, y una cabecera con ambientación animada o música en bucle.</p>
             </article>
             <article class="card feature">
               <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
-              <h3>Interacción contextual</h3>
-              <p>Comentarios anclados a párrafos específicos, marcadores por color y notas privadas al margen.</p>
+              <h3>Interacción por párrafo</h3>
+              <p>Comentarios, reacciones y votos sobre escenas concretas. Subrayados por color, con un nombre propio para cada color y una pantalla para filtrarlos.</p>
             </article>
             <article class="card feature">
               <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
-              <h3>Panel de autor</h3>
-              <p>Editor enriquecido para borradores, novelas por capítulos, publicaciones programadas y estadísticas de lectura.</p>
+              <h3>Estudio de escritura</h3>
+              <p>Editor por bloques (texto, cita, separador, imagen, audio y video) con autoguardado. Gestión de obras y capítulos, y publicación desde la app.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5.5 6.5-5.5s5.7 2.1 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.6.8 2.7 2.6 3 5.2"/></svg></span>
+              <h3>Capa social</h3>
+              <p>Perfiles con banner y foto, muro, seguidores, feed de actividad, búsqueda por etiquetas y listas de lectura.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.8M19 13a10 10 0 0 0-2-1.6M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 11 5M12 20h.01"/></svg></span>
+              <h3>Funciona sin conexión</h3>
+              <p>Si no hay Firebase configurado o no hay internet, la app sigue funcionando con los datos guardados en el teléfono.</p>
             </article>
           </div>
         </section>
 
         <section id="arquitectura" class="chapter reveal">
           <span class="eyebrow"><span class="idx">04</span> Arquitectura</span>
-          <h2>Tipado de punta a punta.</h2>
-          <p>Un stack elegido para disponibilidad, tipado estricto y crecimiento ordenado.</p>
+          <h2>Sin servidor propio, sin perder control.</h2>
+          <p>App en Flutter 3 organizada en <code>data/</code>, <code>screens/</code>, <code>widgets/</code> y <code>theme/</code>, con Firebase como backend y el Google Drive de cada usuario como almacenamiento de archivos.</p>
 
           <div class="arch">
-            <div class="layer">
-              <small>Cliente</small>
-              <b>Flutter · Dart</b>
-              <span>Componentes reutilizables, estado reactivo, temas claro/oscuro</span>
-            </div>
-            <div class="arrow">REST / JWT</div>
             <div class="layer core">
-              <small>API</small>
-              <b>NestJS · TypeScript</b>
-              <span>Módulos, inyección de dependencias, DTOs validados</span>
+              <small>App</small>
+              <b>Flutter 3 · Dart</b>
+              <span>Provider + AppStore central, go_router, caché local</span>
             </div>
-            <div class="arrow">SQL</div>
+            <div class="arrow">SDK</div>
             <div class="layer">
-              <small>Datos</small>
-              <b>PostgreSQL</b>
-              <span>Usuarios, obras, capítulos, progreso y comentarios por párrafo</span>
+              <small>Backend sin servidor</small>
+              <b>Firebase</b>
+              <span>Authentication (correo y Google) y Cloud Firestore</span>
+            </div>
+            <div class="arrow">drive.file</div>
+            <div class="layer">
+              <small>Archivos</small>
+              <b>Google Drive</b>
+              <span>Respaldo de PDF y EPUB en la cuenta de cada usuario</span>
             </div>
           </div>
 
           <div class="decisions">
             <div class="decision">
-              <b><small>Móvil</small>Flutter</b>
-              <p>Una sola base de código para iOS y Android, con renderizado fluido y temas personalizables para lectura nocturna.</p>
+              <b><small>Estado</small>Provider · AppStore</b>
+              <p>Un <code>AppStore</code> central (<code>ChangeNotifier</code>) concentra todo el acceso a datos, así las pantallas no hablan directo con Firebase ni con el almacenamiento local.</p>
             </div>
             <div class="decision">
-              <b><small>Backend</small>NestJS</b>
-              <p>Arquitectura modular con validación estricta de DTOs y autenticación por tokens JWT; facilita crecer por dominios (lectura, autoría, social).</p>
+              <b><small>Navegación</small>go_router</b>
+              <p><code>StatefulShellRoute</code> mantiene la navegación de cada pestaña y las redirecciones dependen de la sesión.</p>
             </div>
             <div class="decision">
-              <b><small>Datos</small>PostgreSQL</b>
-              <p>Modelo relacional pensado para sincronizar el progreso de lectura y mantener la integridad entre usuarios, obras, capítulos y comentarios.</p>
+              <b><small>Datos</small>Cloud Firestore</b>
+              <p>Usuarios, obras, capítulos, comentarios, reacciones, votos, muro y actividad. Autenticación con correo/contraseña y Google.</p>
             </div>
             <div class="decision">
-              <b><small>Diseño</small>Google Stitch</b>
-              <p>Prototipado interactivo de flujos y sistema de diseño accesible antes de implementar, integrado con el entorno Antigravity IDE.</p>
+              <b><small>Archivos</small>Lectores propios</b>
+              <p>Un lector de EPUB propio (descomprime el ZIP y lee el XML/HTML) y un visor de PDF con <code>pdfrx</code> que guarda el progreso.</p>
+            </div>
+            <div class="decision">
+              <b><small>Sincronización</small>Respaldo agrupado</b>
+              <p>Subrayados, listas y progreso se suben a Firestore con un retraso de 3 segundos para agrupar los cambios y ahorrar escrituras.</p>
             </div>
           </div>
         </section>
 
+        <section id="costo-cero" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">05</span> Costo cero</span>
+          <h2>Diseñada para el plan gratuito.</h2>
+          <p>Toda la arquitectura cabe en el plan Spark de Firebase. Cada tipo de contenido se guarda donde no genera costo:</p>
+          <div class="features three">
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></span>
+              <h3>Imágenes</h3>
+              <p>Se comprimen a menos de 300 KB y se guardan en Firestore, con caché en el teléfono para gastar menos lecturas.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+              <h3>Audio y video</h3>
+              <p>Se agregan como enlaces (YouTube, Spotify, SoundCloud, Vimeo…) con su propio reproductor dentro de la app.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7z"/></svg></span>
+              <h3>PDF y EPUB</h3>
+              <p>Se respaldan en el Google Drive de cada usuario con el permiso <code>drive.file</code>, así que la app no paga almacenamiento.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="seguridad" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">06</span> Seguridad y calidad</span>
+          <h2>Reglas escritas a mano y pruebas automáticas.</h2>
+          <div class="split">
+            <div class="card good">
+              <h4>Reglas de Firestore</h4>
+              <ul>
+                <li>Todo requiere sesión iniciada</li>
+                <li>Cada usuario solo puede escribir lo suyo</li>
+                <li>Nombres de usuario únicos validados</li>
+                <li>Largo máximo de los textos limitado</li>
+              </ul>
+            </div>
+            <div class="card good">
+              <h4>Calidad</h4>
+              <ul>
+                <li>25 pruebas automáticas</li>
+                <li>Cubren el lector de EPUB, los códigos de color y las cuentas</li>
+                <li>Análisis estático con <code>flutter_lints</code></li>
+                <li>APK de lanzamiento firmado</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="diseno" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">07</span> Diseño</span>
+          <h2>Validado antes de programar.</h2>
+          <p>Primero hice un prototipo navegable en HTML y lo validé antes de escribir código. La identidad usa una paleta propia de cinco tonos y tres familias tipográficas.</p>
+
+          <div class="palette">
+            <div class="swatch" style="background:#0E1116;color:#ECE6F5"><b>Noche</b><span>#0E1116</span></div>
+            <div class="swatch" style="background:#374A67;color:#ECE6F5"><b>Pizarra</b><span>#374A67</span></div>
+            <div class="swatch" style="background:#616283;color:#fff"><b>Índigo</b><span>#616283</span></div>
+            <div class="swatch" style="background:#9E7B9B;color:#fff"><b>Malva</b><span>#9E7B9B</span></div>
+            <div class="swatch" style="background:#CB9CF2;color:#0E1116"><b>Lavanda</b><span>#CB9CF2</span></div>
+          </div>
+
+          <div class="type-specimens">
+            <div class="card"><span class="aa" style="font-family:'Merriweather',serif">Aa</span><b>Merriweather</b><small>Títulos</small></div>
+            <div class="card"><span class="aa" style="font-family:'Lora',serif;font-style:italic">Aa</span><b>Lora</b><small>Lectura</small></div>
+            <div class="card"><span class="aa" style="font-family:'Roboto',sans-serif">Aa</span><b>Roboto</b><small>Interfaz</small></div>
+          </div>
+        </section>
+
         <section id="pantallas" class="chapter reveal">
-          <span class="eyebrow"><span class="idx">05</span> Pantallas clave</span>
-          <h2>Menos fricción entre descubrir y leer.</h2>
-          <p>Los tres flujos del MVP, diseñados para que el lector llegue al texto en el menor número de pasos.</p>
+          <span class="eyebrow"><span class="idx">08</span> Pantallas clave</span>
+          <h2>Leer, escribir y organizar.</h2>
 
           <div class="screens">
             <article class="card screen">
               <span class="num">01</span>
-              <h3>Onboarding</h3>
-              <p>Acceso rápido, géneros favoritos y tipografía de lectura.</p>
+              <h3>Lector</h3>
+              <p>Subrayados por color y comentarios anclados al párrafo.</p>
               <div class="phone" aria-hidden="true">
                 <div class="phone-screen">
-                  <div class="ps-title" style="margin-top:10px">Bienvenida a Lirien</div>
-                  <div class="ps-line w75"></div>
-                  <div class="ps-grid" style="margin-top:8px">
-                    <div class="ps-line" style="height:22px;border-radius:11px;background:rgba(167,139,250,.35)"></div>
-                    <div class="ps-line" style="height:22px;border-radius:11px"></div>
-                    <div class="ps-line" style="height:22px;border-radius:11px"></div>
-                    <div class="ps-line" style="height:22px;border-radius:11px;background:rgba(167,139,250,.35)"></div>
-                  </div>
+                  <div class="ps-head"><span>‹ Cap. 3</span><span>Aa</span></div>
+                  <div class="ps-line w90"></div>
+                  <div class="ps-line w85 mk-lav"></div>
+                  <div class="ps-hl"><span class="ps-bubble">💬 12</span><div class="ps-line w90"></div><div class="ps-line w60"></div></div>
+                  <div class="ps-line w75 mk-malva"></div>
+                  <div class="ps-line w85"></div>
                 </div>
               </div>
             </article>
             <article class="card screen">
               <span class="num">02</span>
-              <h3>Lector inmersivo</h3>
-              <p>Sin distracciones, notas al margen y comentarios por párrafo.</p>
+              <h3>Editor por bloques</h3>
+              <p>Texto, cita, imagen, audio y video, con autoguardado.</p>
               <div class="phone" aria-hidden="true">
                 <div class="phone-screen">
-                  <div class="ps-head"><span>‹ Cap. 3</span><span>42%</span></div>
-                  <div class="ps-line w90"></div><div class="ps-line w85"></div>
-                  <div class="ps-hl"><span class="ps-bubble">💬 12</span><div class="ps-line w90"></div><div class="ps-line w60"></div></div>
-                  <div class="ps-line w75"></div>
+                  <div class="ps-head"><b>Capítulo 4</b><span class="ps-saved">● Guardado</span></div>
+                  <div class="ps-block"><b>T</b><div class="ps-line w90"></div></div>
+                  <div class="ps-block"><b>“</b><div class="ps-line w75"></div></div>
+                  <div class="ps-block"><b>▣</b><span>Imagen</span></div>
+                  <div class="ps-block"><b>♪</b><span>Audio · enlace</span></div>
                 </div>
               </div>
             </article>
             <article class="card screen">
               <span class="num">03</span>
-              <h3>Biblioteca híbrida</h3>
-              <p>Obras de la comunidad y documentos propios, separados con claridad.</p>
+              <h3>Biblioteca</h3>
+              <p>Comunidad y archivos propios, ordenados a tu manera.</p>
               <div class="phone" aria-hidden="true">
                 <div class="phone-screen">
-                  <div class="ps-head"><b>Biblioteca</b><span>PDF · EPUB</span></div>
+                  <div class="ps-tabs"><span class="on">Comunidad</span><span>Mis archivos</span></div>
                   <div class="ps-grid">
                     <div class="ps-book b1"></div><div class="ps-book b3"></div>
                   </div>
@@ -286,17 +387,28 @@
           </div>
         </section>
 
+        <section id="proximos" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">09</span> Próximos pasos</span>
+          <h2>Lo que viene.</h2>
+          <ul class="next-list">
+            <li class="card"><span class="chip">Próximo</span>Acceso con Apple</li>
+            <li class="card"><span class="chip">Próximo</span>Subrayar dentro del PDF</li>
+            <li class="card"><span class="chip">Próximo</span>Notificaciones push (FCM)</li>
+            <li class="card"><span class="chip">Próximo</span>Respaldo en Dropbox</li>
+          </ul>
+        </section>
+
         <div class="card next-project reveal">
           <div>
-            <span class="eyebrow">¿Quieres ver más?</span>
-            <h2>El código es privado, pero puedo mostrarte<br />el modelo de datos o una demo.</h2>
+            <span class="eyebrow">Pruébala</span>
+            <h2>Instala Lirien en tu Android<br />o pídeme una demo guiada.</h2>
           </div>
           <div class="hero-actions" style="margin-top:0">
-            <a href="index.html#contacto" class="btn btn-primary">
-              Contactar
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <a href="https://github.com/fer161/fer161.github.io/releases/download/lirien-v1.0.0/Lirien-1.0.0.apk" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+              Descargar APK
             </a>
-            <span class="btn btn-ghost" style="cursor:default" title="El repositorio de Lirien es privado">🔒 Repositorio privado</span>
+            <a href="index.html#contacto" class="btn btn-ghost">Contactar</a>
           </div>
         </div>
       </div>

@@ -1054,3 +1054,67 @@ a.social:hover svg { transform: translate(2px, -2px); }
 [data-theme="light"] .project-visual { border-color: rgba(30, 16, 60, 0.12); }
 [data-theme="light"] .stack-items li:hover { background: rgba(124, 58, 237, 0.07); border-color: rgba(124, 58, 237, 0.35); }
 [data-theme="light"] .screen .phone { box-shadow: 0 30px 60px -30px rgba(30, 16, 60, 0.45); }
+
+/* ==========================================================================
+   Case study Lirien — piezas nuevas
+   ========================================================================== */
+
+.apk-note { margin-top: 14px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-3); }
+.case-stats { margin-top: 56px; }
+.chapter code, .decision code {
+  font-family: var(--font-mono); font-size: 0.86em; padding: 1px 6px; border-radius: 6px;
+  background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
+}
+.split li code { font-size: 0.82em; }
+
+/* Maquetas dentro de los teléfonos */
+.ps-tabs { display: flex; gap: 3px; padding: 3px; border-radius: 8px; background: rgba(255,255,255,0.06); font-size: 8.5px; }
+.ps-tabs span { flex: 1; text-align: center; padding: 4px 2px; border-radius: 6px; color: #a4a6c4; white-space: nowrap; }
+.ps-tabs span.on { background: #cb9cf2; color: #0e1116; font-weight: 600; }
+.ps-book { position: relative; }
+.ps-book em { position: absolute; left: 5px; bottom: 5px; font-style: normal; font-family: var(--font-mono); font-size: 7px; padding: 1px 4px; border-radius: 3px; background: rgba(0,0,0,0.45); color: #ece6f5; }
+.ps-line.mk-lav { background: rgba(203, 156, 242, 0.55); }
+.ps-line.mk-malva { background: rgba(158, 123, 155, 0.7); }
+.ps-react { margin-top: auto; display: flex; gap: 6px; font-size: 8.5px; color: #a4a6c4; }
+.ps-react span { padding: 3px 7px; border-radius: 999px; background: rgba(255,255,255,0.06); }
+.ps-splash { padding: 0 !important; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: radial-gradient(80% 50% at 50% 55%, rgba(203,156,242,0.16), transparent 70%), #0e1116 !important; }
+.ps-splash img { width: 74%; height: auto; }
+.ps-splash span { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #a4a6c4; }
+.ps-block { display: flex; align-items: center; gap: 8px; padding: 8px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.14); font-size: 8.5px; color: #a4a6c4; }
+.ps-block b { width: 16px; height: 16px; border-radius: 4px; display: grid; place-items: center; flex-shrink: 0; background: rgba(203,156,242,0.18); color: #cb9cf2; font-size: 9px; }
+.ps-block .ps-line { flex: 1; }
+.ps-saved { color: #4ade80; }
+
+/* Grids */
+.features.three { grid-template-columns: repeat(3, 1fr); }
+
+.palette { margin-top: 32px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.swatch {
+  height: 132px; border-radius: var(--r); padding: 14px; display: flex; flex-direction: column; justify-content: flex-end;
+  border: 1px solid var(--border-2); font-size: 0.86rem;
+}
+.swatch b { font-weight: 600; }
+.swatch span { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.75; }
+
+.type-specimens { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.type-specimens .card { padding: 20px; display: flex; flex-direction: column; }
+.type-specimens .aa { font-size: 2.6rem; line-height: 1.1; color: var(--text); }
+.type-specimens b { margin-top: 12px; font-weight: 600; }
+.type-specimens small { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-3); }
+
+.next-list { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.next-list li { padding: 18px 20px; display: flex; align-items: center; gap: 14px; font-size: 0.96rem; }
+
+@media (max-width: 1080px) {
+  .features.three { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .palette { grid-template-columns: repeat(3, 1fr); }
+  .next-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .palette { grid-template-columns: 1fr 1fr; }
+  .swatch { height: 96px; }
+  .type-specimens { grid-template-columns: 1fr; }
+  .case-stats { margin-top: 40px; }
+}
