@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lirien — Case study | Fernanda Mendiola · Antesis</title>
+  <meta name="description" content="Case study de Lirien: aplicación móvil en Flutter y NestJS para lectores y escritores, con biblioteca híbrida en la nube y lectura interactiva." />
+  <meta name="theme-color" content="#08070c" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="icon" type="image/png" href="assets/img/logo-emblem.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var d = document.documentElement, t;
+      d.classList.remove('no-js');
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="noise"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Antesis — inicio">
+        <img class="logo-dark" src="antesis-logo-white.png" alt="Antesis · Desarrollo Full Stack" width="116" height="38" />
+        <img class="logo-light" src="antesis-logo.png" alt="Antesis · Desarrollo Full Stack" width="116" height="38" />
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#proyectos">Proyectos</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#stack">Stack</a></li>
+          <li><a href="index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar a modo claro" title="Cambiar tema">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ CABECERA ============ -->
+    <section class="container case-hero">
+      <a href="index.html#proyectos" class="back reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Todos los proyectos
+      </a>
+
+      <div class="case-head">
+        <div>
+          <div class="case-chips reveal">
+            <span class="chip wip">MVP en desarrollo</span>
+            <span class="chip">Producto propio</span>
+            <span class="chip">Mobile & Cloud</span>
+          </div>
+          <h1 class="reveal" style="--d:.08s">Lirien<span class="grad-text">.</span><br /><span class="serif" style="font-size:.62em;color:var(--text-2)">Leer y escribir, en un solo lugar.</span></h1>
+          <p class="lead reveal" style="--d:.16s">
+            Una app móvil que une la parte social de la lectura serializada con la privacidad de una biblioteca personal de PDF y EPUB, sincronizada en la nube.
+          </p>
+        </div>
+
+        <dl class="meta-list reveal" style="--d:.2s">
+          <div><dt>Rol</dt><dd>Diseño UI/UX, desarrollo móvil y backend</dd></div>
+          <div><dt>Plataforma</dt><dd>iOS & Android</dd></div>
+          <div><dt>Stack</dt><dd>Flutter · NestJS · PostgreSQL</dd></div>
+          <div><dt>Estado</dt><dd>MVP en progreso</dd></div>
+        </dl>
+      </div>
+
+      <!-- Portada con pantallas -->
+      <div class="case-cover reveal" aria-hidden="true">
+        <div class="phone side">
+          <div class="phone-screen">
+            <div class="ps-head"><b>Biblioteca</b><span>Mis archivos</span></div>
+            <div class="ps-grid">
+              <div class="ps-book b1"></div><div class="ps-book b2"></div>
+              <div class="ps-book b3"></div><div class="ps-book b4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone center">
+          <div class="phone-screen" style="padding:0">
+            <img src="lirien-logo.jpg" alt="" class="ps-logo" />
+          </div>
+        </div>
+        <div class="phone side">
+          <div class="phone-screen">
+            <div class="ps-head"><span>‹ Capítulo 3</span><span>42%</span></div>
+            <div class="ps-title">La casa de las horas quietas</div>
+            <div class="ps-line w90"></div><div class="ps-line w85"></div>
+            <div class="ps-hl"><span class="ps-bubble">💬 12</span><div class="ps-line w90"></div><div class="ps-line w75"></div></div>
+            <div class="ps-line w85"></div><div class="ps-line w60"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CUERPO ============ -->
+    <div class="container case-body">
+      <nav class="toc" aria-label="Contenido del case study">
+        <a href="#resumen">Resumen</a>
+        <a href="#problema">El problema</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#pantallas">Pantallas clave</a>
+      </nav>
+
+      <div>
+        <section id="resumen" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">01</span> Resumen</span>
+          <h2>Un espacio para lectores y escritores.</h2>
+          <p>
+            <strong>Lirien</strong> está pensada para quienes quieren un solo lugar para consumir historias de la comunidad y organizar su biblioteca personal. Combina la interacción social de las plataformas de lectura serializada con el control y la privacidad de un lector de documentos propios respaldados en la nube.
+          </p>
+        </section>
+
+        <section id="problema" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">02</span> El problema</span>
+          <h2>La experiencia de lectura está fragmentada.</h2>
+          <p>
+            Los lectores reparten su tiempo entre apps sociales llenas de distracciones y lectores de PDF/EPUB estáticos que no sincronizan notas entre dispositivos.
+          </p>
+          <div class="split">
+            <div class="card">
+              <h4>Hoy</h4>
+              <ul>
+                <li>Apps sociales con ruido y distracciones</li>
+                <li>Lectores de archivos rígidos y aislados</li>
+                <li>Notas y progreso que no se sincronizan</li>
+              </ul>
+            </div>
+            <div class="card good">
+              <h4>Con Lirien</h4>
+              <ul>
+                <li>Interfaz oscura y limpia centrada en leer</li>
+                <li>Comunidad y archivos propios en una biblioteca</li>
+                <li>Progreso y notas en todos tus dispositivos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="quote">“Centralizar ambos mundos sin sacrificar la concentración del lector, y dar a los creadores herramientas para publicar sin intermediarios técnicos.”</div>
+        </section>
+
+        <section id="funcionalidades" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">03</span> Funcionalidades</span>
+          <h2>Diseñadas con criterio de producto.</h2>
+          <p>Cada función responde a un momento concreto del lector o del autor.</p>
+          <div class="features">
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7z"/></svg></span>
+              <h3>Biblioteca híbrida en la nube</h3>
+              <p>Historias de la comunidad junto a tus propios PDF y EPUB, sincronizados automáticamente entre teléfono y tablet.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg></span>
+              <h3>Lectura inmersiva y multimedia</h3>
+              <p>Los autores integran imágenes, audio ambiental y video directamente en los pasajes clave de la narrativa.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+              <h3>Interacción contextual</h3>
+              <p>Comentarios anclados a párrafos específicos, marcadores por color y notas privadas al margen.</p>
+            </article>
+            <article class="card feature">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+              <h3>Panel de autor</h3>
+              <p>Editor enriquecido para borradores, novelas por capítulos, publicaciones programadas y estadísticas de lectura.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="arquitectura" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">04</span> Arquitectura</span>
+          <h2>Tipado de punta a punta.</h2>
+          <p>Un stack elegido para disponibilidad, tipado estricto y crecimiento ordenado.</p>
+
+          <div class="arch">
+            <div class="layer">
+              <small>Cliente</small>
+              <b>Flutter · Dart</b>
+              <span>Componentes reutilizables, estado reactivo, temas claro/oscuro</span>
+            </div>
+            <div class="arrow">REST / JWT</div>
+            <div class="layer core">
+              <small>API</small>
+              <b>NestJS · TypeScript</b>
+              <span>Módulos, inyección de dependencias, DTOs validados</span>
+            </div>
+            <div class="arrow">SQL</div>
+            <div class="layer">
+              <small>Datos</small>
+              <b>PostgreSQL</b>
+              <span>Usuarios, obras, capítulos, progreso y comentarios por párrafo</span>
+            </div>
+          </div>
+
+          <div class="decisions">
+            <div class="decision">
+              <b><small>Móvil</small>Flutter</b>
+              <p>Una sola base de código para iOS y Android, con renderizado fluido y temas personalizables para lectura nocturna.</p>
+            </div>
+            <div class="decision">
+              <b><small>Backend</small>NestJS</b>
+              <p>Arquitectura modular con validación estricta de DTOs y autenticación por tokens JWT; facilita crecer por dominios (lectura, autoría, social).</p>
+            </div>
+            <div class="decision">
+              <b><small>Datos</small>PostgreSQL</b>
+              <p>Modelo relacional pensado para sincronizar el progreso de lectura y mantener la integridad entre usuarios, obras, capítulos y comentarios.</p>
+            </div>
+            <div class="decision">
+              <b><small>Diseño</small>Google Stitch</b>
+              <p>Prototipado interactivo de flujos y sistema de diseño accesible antes de implementar, integrado con el entorno Antigravity IDE.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pantallas" class="chapter reveal">
+          <span class="eyebrow"><span class="idx">05</span> Pantallas clave</span>
+          <h2>Menos fricción entre descubrir y leer.</h2>
+          <p>Los tres flujos del MVP, diseñados para que el lector llegue al texto en el menor número de pasos.</p>
+
+          <div class="screens">
+            <article class="card screen">
+              <span class="num">01</span>
+              <h3>Onboarding</h3>
+              <p>Acceso rápido, géneros favoritos y tipografía de lectura.</p>
+              <div class="phone" aria-hidden="true">
+                <div class="phone-screen">
+                  <div class="ps-title" style="margin-top:10px">Bienvenida a Lirien</div>
+                  <div class="ps-line w75"></div>
+                  <div class="ps-grid" style="margin-top:8px">
+                    <div class="ps-line" style="height:22px;border-radius:11px;background:rgba(167,139,250,.35)"></div>
+                    <div class="ps-line" style="height:22px;border-radius:11px"></div>
+                    <div class="ps-line" style="height:22px;border-radius:11px"></div>
+                    <div class="ps-line" style="height:22px;border-radius:11px;background:rgba(167,139,250,.35)"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card screen">
+              <span class="num">02</span>
+              <h3>Lector inmersivo</h3>
+              <p>Sin distracciones, notas al margen y comentarios por párrafo.</p>
+              <div class="phone" aria-hidden="true">
+                <div class="phone-screen">
+                  <div class="ps-head"><span>‹ Cap. 3</span><span>42%</span></div>
+                  <div class="ps-line w90"></div><div class="ps-line w85"></div>
+                  <div class="ps-hl"><span class="ps-bubble">💬 12</span><div class="ps-line w90"></div><div class="ps-line w60"></div></div>
+                  <div class="ps-line w75"></div>
+                </div>
+              </div>
+            </article>
+            <article class="card screen">
+              <span class="num">03</span>
+              <h3>Biblioteca híbrida</h3>
+              <p>Obras de la comunidad y documentos propios, separados con claridad.</p>
+              <div class="phone" aria-hidden="true">
+                <div class="phone-screen">
+                  <div class="ps-head"><b>Biblioteca</b><span>PDF · EPUB</span></div>
+                  <div class="ps-grid">
+                    <div class="ps-book b1"></div><div class="ps-book b3"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="card next-project reveal">
+          <div>
+            <span class="eyebrow">¿Quieres ver más?</span>
+            <h2>El código es privado, pero puedo mostrarte<br />el modelo de datos o una demo.</h2>
+          </div>
+          <div class="hero-actions" style="margin-top:0">
+            <a href="index.html#contacto" class="btn btn-primary">
+              Contactar
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <span class="btn btn-ghost" style="cursor:default" title="El repositorio de Lirien es privado">🔒 Repositorio privado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer-top">
+      <img class="logo-dark" src="antesis-logo-white.png" alt="Antesis" width="103" height="34" />
+      <img class="logo-light" src="antesis-logo.png" alt="Antesis" width="103" height="34" />
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="index.html#proyectos">Proyectos</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="CV-Fernanda-Mendiola.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="https://github.com/fer161" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Antesis · Fernanda Mendiola Silva</span>
+      <a href="#main" class="to-top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

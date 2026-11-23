@@ -1,0 +1,18 @@
+# Solo se publican los archivos que usa la web
+/*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/lirien.html
+!/styles.css
+!/app.js
+!/antesis-logo.png
+!/antesis-logo-white.png
+!/lirien-logo.jpg
+!/CV-Fernanda-Mendiola.pdf
+!/assets/
+/assets/*
+!/assets/img/
+/assets/img/*
+!/assets/img/logo-emblem.png
